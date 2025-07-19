@@ -20,9 +20,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-foreground">
-            Ajay Tak
-          </Link>
+          <div className="text-xl font-bold text-foreground">
+            {/* Empty logo space */}
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

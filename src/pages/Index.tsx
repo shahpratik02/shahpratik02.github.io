@@ -24,10 +24,8 @@ const Index = () => {
             {/* Text Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  <span className="gradient-primary bg-clip-text text-transparent">
-                    Ajay Tak
-                  </span>
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                  Ajay Tak
                 </h1>
                 <div className="space-y-2">
                   <h2 className="text-xl md:text-2xl font-medium text-foreground">
