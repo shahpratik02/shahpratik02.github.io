@@ -108,7 +108,7 @@ const Research = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 gradient-primary bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
             Research
           </h1>
           <div className="max-w-4xl mx-auto">
