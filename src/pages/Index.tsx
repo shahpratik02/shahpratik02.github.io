@@ -39,9 +39,13 @@ const Index = () => {
 
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Developing next-generation control and learning methods for agile robotics. 
-                  Passionate about creating systems that are dynamic, fast, and responsive 
-                  while generalizing across tasks and environments.
+                  I am a Robotics student at Georgia Tech, advised by Prof. Matthew Gombolay. I am part of the Cognitive Optimization and Robotics (CORE) Lab, where I focus on agile robotic control and decision-making under uncertainty. My research interests lie at the intersection of control theory, machine learning, and robotics, particularly in developing fast, adaptive controllers that enable high-performance robotic behaviors in dynamic and constrained environments.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Before joining Georgia Tech, I completed my undergraduate degree in Aerospace Engineering at IIT Bombay. During that time, I worked on a range of research problems, from multi-agent flocking algorithms under nonholonomic and actuation constraints, advised by Prof. Shashi Ranjan Kumar and Leela Vacchani, to bilevel distributed optimization with stochastic gradients under the mentorship of Prof. Mayank Baranwal. I also collaborated with Prof. Hugh Liu during a MITACS research internship at the University of Toronto, where I modeled hydrodynamic disturbances on a quadrotor-payload system designed for water sampling applications.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Across these projects, I've consistently explored how to build control algorithms that are both theoretically grounded and practically viable. My work is motivated by the belief that solving hard control problems in agile robotics can lead to generalizable solutions across a wide range of domains.
                 </p>
               </div>
             </div>
