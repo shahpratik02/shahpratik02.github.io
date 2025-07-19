@@ -47,6 +47,9 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed mt-4">
                   Across these projects, I've consistently explored how to build control algorithms that are both theoretically grounded and practically viable. My work is motivated by the belief that solving hard control problems in agile robotics can lead to generalizable solutions across a wide range of domains.
                 </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Outside of research, I'm a highly disciplined individual with strong personal interests in fitness, nutrition, and dance. These passions keep me balanced and focused.
+                </p>
               </div>
             </div>
           </div>
