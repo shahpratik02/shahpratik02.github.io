@@ -12,18 +12,13 @@ const Index = () => {
           <div className="text-center space-y-8">
             {/* Profile Photo */}
             <div className="flex justify-center">
-              <Card className="gradient-card border-border shadow-card w-48 h-48 rounded-full overflow-hidden">
-                <CardContent className="flex items-center justify-center h-full p-0">
-                  <div className="text-center space-y-2">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto flex items-center justify-center">
-                      <span className="text-2xl text-primary">👨‍🔬</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      Photo coming soon
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="w-48 h-48 rounded-full overflow-hidden shadow-card border-2 border-border">
+                <img 
+                  src="/lovable-uploads/6ef13518-d1aa-4f52-a0c1-fb0da9ffa892.png" 
+                  alt="Ajay Tak"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             {/* Text Content */}
