@@ -1,45 +1,6 @@
-import { Mail, Github, Linkedin, GraduationCap } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-8 py-6 max-w-7xl">
-          <div className="flex justify-between items-start">
-            <h1 className="text-3xl font-bold text-foreground">Ajay Tak</h1>
-            <div className="flex flex-col items-end gap-4">
-              <nav className="flex items-center gap-6">
-                <Link to="/research" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  Publications
-                </Link>
-                <Link to="/research" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  News
-                </Link>
-                <Link to="/cv" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  CV
-                </Link>
-              </nav>
-              <div className="flex items-center gap-4">
-                <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  <Github size={20} />
-                </a>
-                <a href="mailto:your.email@gatech.edu" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  <Mail size={20} />
-                </a>
-                <a href="https://scholar.google.com" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  <GraduationCap size={20} />
-                </a>
-                <a href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-smooth">
-                  <Linkedin size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-background pt-16">
       {/* Main Content */}
       <div className="container mx-auto px-8 py-12 max-w-7xl">
         <div className="flex gap-16 items-start">
@@ -73,7 +34,7 @@ const Index = () => {
 
           {/* Right content - Profile image */}
           <div className="flex-shrink-0">
-            <div className="w-80 h-80 rounded-full overflow-hidden border border-border">
+            <div className="w-64 h-64 rounded-full overflow-hidden border border-border">
               <img 
                 src="/lovable-uploads/6ef13518-d1aa-4f52-a0c1-fb0da9ffa892.png" 
                 alt="Ajay Tak"
