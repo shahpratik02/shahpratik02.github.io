@@ -57,14 +57,11 @@ const CV = () => {
               <Button 
                 size="lg" 
                 className="gradient-primary shadow-glow transition-smooth hover:scale-105"
-                disabled
+                onClick={() => window.open('https://drive.google.com/file/d/1P68s8Vk2u0ypz6W6zFh0ZRZnlBRANftU/view?usp=sharing', '_blank')}
               >
                 <Download className="h-5 w-5 mr-2" />
                 Download CV (PDF)
               </Button>
-              <p className="text-sm text-muted-foreground mt-2">
-                Resume link will be available soon
-              </p>
             </div>
           </CardContent>
         </Card>
