@@ -112,7 +112,7 @@ const Research = () => {
             Research
           </h1>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
               {currentFocus}
             </p>
           </div>
@@ -151,7 +151,7 @@ const Research = () => {
                     {experience.description.map((point, idx) => (
                       <li key={idx} className="text-muted-foreground flex items-start">
                         <span className="text-primary mr-2 mt-2">•</span>
-                        <span className="flex-1">{point}</span>
+                        <span className="flex-1 text-justify">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -190,7 +190,7 @@ const Research = () => {
                     {project.description.map((point, idx) => (
                       <li key={idx} className="text-muted-foreground flex items-start">
                         <span className="text-primary mr-2 mt-2">•</span>
-                        <span className="flex-1">{point}</span>
+                        <span className="flex-1 text-justify">{point}</span>
                       </li>
                     ))}
                   </ul>
