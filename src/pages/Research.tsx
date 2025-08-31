@@ -7,26 +7,25 @@ const Research = () => {
 
   const researchExperience = [
     {
-      title: "Vision-Based Localization for Wheelchair Tennis Robot",
+      title: "Vision-Based Localization",
       organization: "CORE Robotics Lab, Georgia Tech",
       location: "Atlanta, GA",
       period: "Jan 2025 – Present",
       description: [
-        "Designing a robust localization pipeline using court-line detection and particle filtering for a mobile robot in open, low-feature environments like tennis courts",
-        "Adapted and improved netNed (ENet-based) for semantic segmentation of court-lines; improved model performance by integrating focal loss to mitigate extreme class imbalance",
-        "Conducted data annotation with CVAT and built a custom image generation pipeline to produce binary and multi-class images for training in limited data (350 images)",
-        "Fine-tuned DINOv2 encoder with contrastive loss to compute similarity between observed and particle-projected court images, enhancing measurement update in the particle filters"
+        "Addressed tennis robot localization on featureless tennis courts using court-line geometry as the primary visual cue",
+        "Built a ROS-based pipeline combining deep court-line segmentation model with a particle filter that reweights particles by comparing the actual segmented image with the estimated particle image from the camera model",
+        "Achieved accurate, stable localization on rosbags and advanced toward hardware deployment"
       ],
       tags: ["Computer Vision", "Robotics", "Deep Learning", "SLAM"]
     },
     {
-      title: "Sim-to-Real Transfer of Agile RL Policies for Tennis Robot",
+      title: "Sim-to-Real Transfer of Agile RL Policies",
       organization: "CORE Robotics Lab, Georgia Tech",
       location: "Atlanta, GA", 
       period: "May 2025 – Present",
       description: [
-        "Investigating state-of-the-art sim-to-real transfer techniques (domain randomization, residual dynamics learning, system identification) for sim-to-real transfer",
-        "Conducting literature review and benchmarking recent RL-based control frameworks for dynamic athletic tasks, focusing on agility, robustness, and transfer efficiency"
+        "Tackling the challenge of learning goal-conditioned, agile RL policies that coordinate the mobile base and manipulator of a tennis robot to achieve fast, physically feasible tennis hitting motions without dense demonstrations",
+        "Promoting exploration in learning goal-conditioned whole-body policies by leveraging a manipulator SMM dataset and an Offline RL-inspired regularization to guide safe, feasible arm motions"
       ],
       tags: ["Reinforcement Learning", "Sim-to-Real", "Control Systems"]
     },
