@@ -2,14 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Download, ExternalLink, Mail, Phone, MapPin, Globe } from 'lucide-react';
 
-const CV = () => {
+const Resume = () => {
   return (
     <div className="min-h-screen bg-background pt-20 pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Curriculum Vitae
+            Resume
           </h1>
           <p className="text-lg text-muted-foreground">
             Download my complete academic and professional background
@@ -57,10 +57,10 @@ const CV = () => {
               <Button 
                 size="lg" 
                 className="gradient-primary shadow-glow transition-smooth hover:scale-105"
-                onClick={() => window.open('https://drive.google.com/file/d/1P68s8Vk2u0ypz6W6zFh0ZRZnlBRANftU/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1X98qj1KUZrWImJHieYXEB41__FHW3jXF/view?usp=sharing', '_blank')}
               >
                 <Download className="h-5 w-5 mr-2" />
-                Download CV (PDF)
+                Download Resume (PDF)
               </Button>
             </div>
           </CardContent>
@@ -108,4 +108,4 @@ const CV = () => {
   );
 };
 
-export default CV;
+export default Resume;
