@@ -37,7 +37,7 @@ const Index = () => {
             <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border border-border">
               <img 
                 src="/lovable-uploads/6ef13518-d1aa-4f52-a0c1-fb0da9ffa892.png" 
-                alt="Ajay Tak"
+                alt="Pratik Shah"
                 className="w-full h-full object-cover"
               />
             </div>
