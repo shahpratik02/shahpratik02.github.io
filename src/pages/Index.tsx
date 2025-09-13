@@ -7,19 +7,19 @@ const Index = () => {
           {/* Left content - Text */}
           <div className="flex-1 max-w-4xl space-y-6 order-2 lg:order-1">
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              I am a Robotics student at Georgia Tech, advised by Prof. Matthew Gombolay. I am part of the Cognitive Optimization and Robotics (CORE) Lab, where I focus on agile robotic control and decision-making under uncertainty. My research interests lie at the intersection of control theory, machine learning, and robotics, particularly in developing fast, adaptive controllers that enable high-performance robotic behaviors in dynamic and constrained environments.
+              I am a second-year Master's student at Georgia Tech specializing in Machine Learning, with a strong focus on building scalable AI systems and exploring reinforcement learning and robotics. My greatest strength is my ability to learn and adapt quickly. I began studying Mechanical Engineering at IIT Bombay, one of India's premier institutions, but through projects, coursework, and robotics, I was drawn to AI—particularly reinforcement learning—and pursued it alongside my main degree. By the end of my undergraduate studies, I achieved Department Rank 5 in Mechanical Engineering and published two A* journal papers in reinforcement learning.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Before joining Georgia Tech, I completed my undergraduate degree in Aerospace Engineering at IIT Bombay. During that time, I worked on a range of research problems, from multi-agent flocking algorithms under nonholonomic and actuation constraints, advised by Prof. Shashi Ranjan Kumar and Leela Vacchani, to bilevel distributed optimization with stochastic gradients under the mentorship of Prof. Mayank Baranwal. I also collaborated with Prof. Hugh Liu during a MITACS research internship at the University of Toronto, where I modeled hydrodynamic disturbances on a quadrotor-payload system designed for water sampling applications.
+              Most recently, at Nutanix, I developed RANGER, a repository-scale code retrieval agent that combines knowledge graph construction with Monte Carlo Tree Search traversal. This system enables multi-hop reasoning across large codebases, outperformed baseline models on multiple benchmarks, and is currently under provisional patent consideration with a submission to ICLR 2026. At Microsoft, I built and deployed a serverless retrieval-augmented generation pipeline on Azure using GPT-3.5 to generate and translate personalized health tips at scale, reducing production time from two weeks to 30 minutes.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Across these projects, I've consistently explored how to build control algorithms that are both theoretically grounded and practically viable. My work is motivated by the belief that solving hard control problems in agile robotics can lead to generalizable solutions across a wide range of domains.
+              As a Graduate Research Assistant at Georgia Tech's PACE initiative, I am building an AI inference server that routes requests through a LiteLLM gateway to vLLM servers scheduled on HPC GPUs via Slurm. At Georgia Tech's STAR Lab under Prof. Harish Ravichandar, I am working on Koopman operator-based visual imitation learning for dexterous manipulation. My interest in robotics began during my undergraduate studies at IIT Bombay, where I was part of the Autonomous Underwater Vehicle Team developing the Matsya series and representing India in the international RoboSub competition.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Outside of research, I'm a highly disciplined individual with strong personal interests in fitness, nutrition, and dance. These passions keep me balanced and focused.
+              Across these experiences, my core strength has been quickly learning and applying new technologies. Outside of work, I am an ambitious and disciplined individual with personal interests in fitness, football, and dance, which help me stay balanced and focused.
             </p>
 
             <div className="mt-8">
@@ -27,7 +27,7 @@ const Index = () => {
                 Research Interests:
               </p>
               <p className="text-lg text-muted-foreground text-justify">
-                Agile robotic control, optimal control, learning-based decision-making, optimization.
+                Reinforcement learning, scalable AI systems, robotics, machine learning, knowledge graphs, code intelligence, visual imitation learning, multi-hop reasoning.
               </p>
             </div>
           </div>
