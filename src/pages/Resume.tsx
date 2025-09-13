@@ -26,9 +26,7 @@ const Resume = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
               Resume
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Pratik Shah
-            </p>
+            
           </div>
           
           <div className="flex gap-3">
