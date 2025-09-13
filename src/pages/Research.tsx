@@ -246,7 +246,7 @@ const Research = () => {
                   <ul className="space-y-2 mb-4">
                     {experience.description.map((point, idx) => (
                       <li key={idx} className="text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2 mt-2">•</span>
+                        <span className="text-primary mr-2 leading-relaxed">•</span>
                         <span className="flex-1 text-justify">{point}</span>
                       </li>
                     ))}
