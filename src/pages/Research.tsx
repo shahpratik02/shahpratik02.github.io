@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Research = () => {
-  const currentFocus = `I'm a Machine Learning graduate student at Georgia Tech with a background in Mechanical Engineering from IIT Bombay. My research spans reinforcement learning, repository-scale code intelligence, and robotics. I'm particularly interested in developing scalable AI systems that bridge theory and practice, from graph-enhanced retrieval systems to learning-based control policies. My work is motivated by the belief that solving complex AI challenges in specialized domains leads to generalizable solutions across broader applications.`;
+  const currentFocus = `I'm a Machine Learning graduate student at Georgia Tech and my research interests spans Reinforcement Learning, Natural Language Processing, and Robotics.`;
 
   const publications = [
     {
@@ -14,7 +14,6 @@ const Research = () => {
       authors: "P. Shah et al.",
       year: "2026",
       link: null,
-      highlight: "Provisional Patent"
     },
     {
       title: "Lagrangian Index Policy for Restless Bandits with Average Reward",
@@ -49,8 +48,7 @@ const Research = () => {
         "Developed a dual-stage retriever combining text2cypher for entity lookup with the novel MCTS algorithm for graph traversal",
         "Beat Qwen-3-8B (SOTA) semantic retrieval, scoring 6% higher NDCG@10 on CodeSearchNet (NL→Code benchmark). Got 6% higher exact match on CrossCodeEval and 5% higher accuracy on RepoBench for code completion and retrieval over baselines"
       ],
-      tags: ["GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
-      highlights: ["Provisional Patent", "ICLR '26 Submission"]
+      tags: ["Retrieval Agent", "SWE Agent", "GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
     },
     {
       title: "Lagrangian Index Policy for Restless Bandits With Average Reward",
@@ -61,18 +59,18 @@ const Research = () => {
         "LIP requires no indexability conditions and the proposed tabular and NN-based reinforcement learning schemes for model-free setting require significantly less memory and time than the Whittle Index Policy (WIP), which is the standard in this domain",
         "The new policy is asymptotically optimal and applicable to both Whittle Indexable and Non-Whittle Indexable problems"
       ],
-      tags: ["Restless Bandits", "Index Policy", "Reinforcement Learning", "Optimization", "Resource Allocation"]
+      tags: ["Restless Bandits", "Index Policy", "Reinforcement Learning", "Optimization", "Resource Allocation", "Scheduling"]
     },
     {
       title: "Reinforcement Learning in Non-Markovian Environments",
-      organization: "IIT Bombay",
+      organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay",
       period: "Dec '22 - Sep '23",
       description: [
         "Designed a new RL agent, the Non-Markovian Q Agent (NMQ), to tackle environments where past information is crucial",
         "The NMQ agent uses an autoencoder-based scheme to tackle non-Markovianity by learning a latent state space for a Deep Q-Network (DQN). Modified OpenAI Gym environments like CartPole to be partially observable for testing the agent",
         "The NMQ agent outperformed the standard DQN agent in partially observable environments and Non-Markovian random walks"
       ],
-      tags: ["Reinforcement Learning", "Non-Markovian", "DQN", "Autoencoder", "OpenAI Gym"]
+      tags: ["Reinforcement Learning", "Non-Markovian", "Deep Q-Network", "Autoencoder", "OpenAI Gym", "Q-Learning"]
     },
     {
       title: "Matsya, Autonomous Underwater Vehicle",
@@ -85,8 +83,7 @@ const Research = () => {
         "Led an 11-member team in AUV-IITB and L&T Defence's technology transfer project to develop an ROV for defense purposes",
         "Conceptualized a towfish design for underwater pipeline inspection in collaboration with an oil consortium led by ONGC"
       ],
-      tags: ["Autonomous Underwater Vehicle", "Reinforcement Learning", "Control Systems", "Robotics", "Team Leadership"],
-      highlights: ["IEEE Young Researchers' Prize", "4th place Robosub 2024"]
+      tags: ["Autonomous Underwater Vehicle", "Reinforcement Learning", "Control Systems", "Robotics", "Team Leadership", "Computer Vision"],
     }
   ];
 
