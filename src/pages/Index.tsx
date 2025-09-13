@@ -7,7 +7,7 @@ const Index = () => {
           {/* Left content - Text */}
           <div className="flex-1 max-w-4xl space-y-6 order-2 lg:order-1">
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              I am a second-year Master's student at Georgia Tech specializing in Machine Learning, with a strong focus on building scalable AI systems and exploring reinforcement learning and robotics. My greatest strength is my ability to learn and adapt quickly. I began studying Mechanical Engineering at IIT Bombay, one of India's premier institutions, but through projects, coursework, and robotics, I was drawn to AI—particularly reinforcement learning—and pursued it alongside my main degree. By the end of my undergraduate studies, I achieved Department Rank 5 in Mechanical Engineering and published two A* journal papers in reinforcement learning.
+              I am a second-year Master's student at Georgia Tech specializing in Machine Learning, with a strong focus on building scalable AI systems and exploring reinforcement learning and robotics. My greatest strength is my ability to learn and adapt quickly. I began studying Mechanical Engineering at IIT Bombay, one of India's premier institutions, but through projects, coursework, and robotics, I was drawn to AI, particularly reinforcement learning, and pursued it alongside my main degree. By the end of my undergraduate studies, I achieved Department Rank 5 in Mechanical Engineering and published two A* journal papers in reinforcement learning.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
