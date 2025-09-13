@@ -11,7 +11,7 @@ const Index = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              Most recently, at Nutanix, I developed RANGER, a repository-scale code retrieval agent that combines knowledge graph construction with Monte Carlo Tree Search traversal. This system enables multi-hop reasoning across large codebases, outperformed baseline models on multiple benchmarks, and is currently under provisional patent consideration with a submission to ICLR 2026. At Microsoft, I built and deployed a serverless retrieval-augmented generation pipeline on Azure using GPT-3.5 to generate and translate personalized health tips at scale, reducing production time from two weeks to 30 minutes.
+              Most recently, at Nutanix, I developed RANGER, a repository-scale code retrieval agent that combines knowledge graph construction with Monte Carlo Tree Search traversal. This system enables multi-hop reasoning across large codebases, outperformed baseline models on multiple benchmarks, and has a provisional patent filed with a submission under preparation to ICLR 2026. At Microsoft, I built and deployed a serverless retrieval-augmented generation pipeline on Azure using GPT-3.5 to generate and translate personalized health tips at scale, reducing production time from two weeks to 30 minutes.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
@@ -22,13 +22,24 @@ const Index = () => {
               Across these experiences, my core strength has been quickly learning and applying new technologies. Outside of work, I am an ambitious and disciplined individual with personal interests in fitness, football, and dance, which help me stay balanced and focused.
             </p>
 
-            <div className="mt-8">
-              <p className="text-lg text-foreground font-semibold">
-                Research Interests:
-              </p>
-              <p className="text-lg text-muted-foreground text-justify">
-                Reinforcement learning, scalable AI systems, robotics, machine learning, knowledge graphs, code intelligence, visual imitation learning, multi-hop reasoning.
-              </p>
+            <div className="mt-8 space-y-4">
+              <div>
+                <p className="text-lg text-foreground font-semibold">
+                  Skills:
+                </p>
+                <p className="text-lg text-muted-foreground text-justify">
+                  AWS Certified Cloud Practitioner, Python, C++, SQL, Azure, Spark, Java, CUDA, Linux, Neo4j, Git, Slurm
+                </p>
+              </div>
+              
+              <div>
+                <p className="text-lg text-foreground font-semibold">
+                  Frameworks:
+                </p>
+                <p className="text-lg text-muted-foreground text-justify">
+                  PyTorch, TensorFlow, vLLM, LangChain, LlamaIndex, HuggingFace, OpenAI, Gym, RLlib, torchrun, TensorRT
+                </p>
+              </div>
             </div>
           </div>
 
