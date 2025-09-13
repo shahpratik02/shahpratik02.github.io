@@ -195,7 +195,7 @@ const Research = () => {
                             <span>Guides:</span>
                             <div className="flex flex-wrap gap-2">
                               {experience.professorLinks.map((prof, idx) => (
-                                <span key={idx}>
+                                <span key={idx} className="flex items-center">
                                   <a 
                                     href={prof.url} 
                                     target="_blank" 
@@ -205,7 +205,7 @@ const Research = () => {
                                     {prof.name}
                                     <ExternalLink className="h-3 w-3" />
                                   </a>
-                                  {idx < experience.professorLinks.length - 1 && <span className="text-muted-foreground">;</span>}
+                                  {idx < experience.professorLinks.length - 1 && <span className="text-muted-foreground ml-1">,</span>}
                                 </span>
                               ))}
                             </div>
