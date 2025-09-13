@@ -54,7 +54,7 @@ const WorkExperience = () => {
         "Applied tokenization, GloVe vectorization, dimensionality reduction (PCA, t-SNE), and K-means clustering to group job titles"
       ],
       tags: ["NLP", "GloVe", "PCA", "t-SNE", "K-means"],
-=    }
+    }
   ];
 
   return (
