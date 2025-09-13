@@ -16,13 +16,12 @@ const WorkExperience = () => {
         "Developed a dual-stage retriever combining text2cypher for entity lookup with the novel MCTS algorithm for graph traversal",
         "Beat Qwen-3-8B (SOTA) semantic retrieval, scoring 6% higher NDCG@10 on CodeSearchNet (NL→Code benchmark). Got 6% higher exact match on CrossCodeEval and 5% higher accuracy on RepoBench for code completion and retrieval over baselines"
       ],
-      tags: ["GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
-      highlights: ["Provisional Patent", "ICLR '26 Submission"]
+      tags: ["Retrieval Agent", "SWE Agent", "GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
     },
     {
       title: "Data Science Intern",
       organization: "Microsoft",
-      location: "Redmond, WA",
+      location: "Hyderabad, India",
       period: "May '23 - Jun '23",
       description: [
         "Automated personalized health tips generation using OpenAI GPT Models on MSN health pages data | In Production",
@@ -30,8 +29,7 @@ const WorkExperience = () => {
         "Reduced the tip generation time from 2 weeks to 30 minutes for 100 tips and attained a per-tip cost of ~$0.0015",
         "Created a GPT-3.5 based translation pipeline, expanding coverage from 14 English to all 24 markets, including non-English ones"
       ],
-      tags: ["OpenAI GPT", "Azure Functions", "RAG", "REST APIs", "Azure SQL", "GPT-3.5"],
-      highlights: ["In Production", "2 weeks → 30 minutes"]
+      tags: ["OpenAI API", "Azure", "Azure Functions", "RAG", "REST APIs", "Azure SQL", "GPT-3.5", "Translation"],
     },
     {
       title: "Graduate Research Assistant",
@@ -44,21 +42,19 @@ const WorkExperience = () => {
         "Enabled 51 courses to use PACE's HPC clusters by containerizing ML workloads, configuring shared storage and scheduling jobs",
         "Developed workshops for the AI Makerspace, a university-wide initiative with Nvidia for hands-on AI/ML education, covering multi-GPU training (torchrun), Llama-2 fine-tuning, and model deployment with TensorRT and Triton Inference Server"
       ],
-      tags: ["LiteLLM", "vLLM", "HPC", "Slurm", "Docker", "TensorRT", "Triton", "Nvidia"],
-      highlights: ["51 courses enabled", "University-wide initiative"]
+      tags: ["AI Inference Server", "LiteLLM", "vLLM", "HPC", "Slurm", "Docker", "TensorRT", "Triton", "Apptainer", "torchrun"],
     },
     {
       title: "Data Science Intern",
       organization: "Data Axle",
-      location: "Tampa, FL",
+      location: "Pune, India",
       period: "May '22 - Jul '22",
       description: [
         "Consolidated 50,000 job titles into 1,000 standardized titles using NLP and clustering for the company's lead generation service",
         "Applied tokenization, GloVe vectorization, dimensionality reduction (PCA, t-SNE), and K-means clustering to group job titles"
       ],
-      tags: ["NLP", "GloVe", "PCA", "t-SNE", "K-means", "Clustering"],
-      highlights: ["50,000 → 1,000 titles"]
-    }
+      tags: ["NLP", "GloVe", "PCA", "t-SNE", "K-means"],
+=    }
   ];
 
   return (
@@ -71,7 +67,7 @@ const WorkExperience = () => {
           </h1>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              My professional journey spans across leading technology companies, from developing cutting-edge AI systems at Nutanix to building production-ready solutions at Microsoft. I've worked on diverse projects including repository-scale code intelligence, automated content generation, high-performance computing infrastructure, and data processing pipelines. Each role has strengthened my expertise in machine learning, software engineering, and system design while contributing to impactful products used by millions.
+              My professional journey spans across leading technology companies, from doing cutting-edge research at Nutanix to building production-ready GenAI solutions at Microsoft. I've worked on diverse projects including repository-scale code intelligence, automated content generation, high-performance computing infrastructure, and data processing pipelines.
             </p>
           </div>
         </div>

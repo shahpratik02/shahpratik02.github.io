@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Download, ExternalLink } from 'lucide-react';
 
 const Resume = () => {
-  const resumePdfPath = '/pratik_resume_final_gatech_new2.pdf'; // PDF file in the public folder
+  const resumePdfPath = '/pratik_resume_final_gatech.pdf'; // PDF file in the public folder
   
   const handleDownload = () => {
     const link = document.createElement('a');

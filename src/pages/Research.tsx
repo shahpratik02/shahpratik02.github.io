@@ -3,68 +3,90 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Research = () => {
-  const currentFocus = `I'm a Robotics graduate student at Georgia Tech with a background in Aerospace Engineering from IIT Bombay. My current focus is on agile robotics, developing control and learning methods that enable dynamic, fast, and responsive behavior in physical systems. I'm particularly interested in approaches that generalize across tasks and environments, motivated by the belief that solving the challenges of agile control leads to solutions applicable to a wide range of robotics problems. My broader interests include learning-based control, sim-to-real transfer, and decision-making for high-performance autonomous systems.`;
+  const currentFocus = `I'm a Machine Learning graduate student at Georgia Tech with a background in Mechanical Engineering from IIT Bombay. My research spans reinforcement learning, repository-scale code intelligence, and robotics. I'm particularly interested in developing scalable AI systems that bridge theory and practice, from graph-enhanced retrieval systems to learning-based control policies. My work is motivated by the belief that solving complex AI challenges in specialized domains leads to generalizable solutions across broader applications.`;
+
+  const publications = [
+    {
+      title: "RANGER: Repository-Scale Agent for Graph-Enhanced Retrieval",
+      status: "Preparing for Submission",
+      venue: "ICLR 2026",
+      venueType: "conference",
+      authors: "P. Shah et al.",
+      year: "2026",
+      link: null,
+      highlight: "Provisional Patent"
+    },
+    {
+      title: "Lagrangian Index Policy for Restless Bandits with Average Reward",
+      status: "Submitted",
+      venue: "Queueing Systems Journal",
+      venueType: "journal",
+      authors: "K. Avrachenkov, V.S. Borkar, P. Shah",
+      year: "2024",
+      link: "https://arxiv.org/abs/2412.12641",
+      arxiv: "arXiv:2412.12641"
+    },
+    {
+      title: "Reinforcement Learning in non-Markovian Environments",
+      status: "Published",
+      venue: "Systems and Control Letters, vol. 185, 105751",
+      venueType: "journal",
+      authors: "S. Chandak, P. Shah, V. S. Borkar, P. Dodhia",
+      year: "2024",
+      link: "https://www.sciencedirect.com/science/article/pii/S0167691124000392"
+    }
+  ];
 
   const researchExperience = [
     {
-      title: "Vision-Based Localization",
-      organization: "CORE Robotics Lab, Georgia Tech",
-      location: "Atlanta, GA",
-      period: "Jan 2025 – Present",
+      title: "RANGER: Repository-scale Agent for Graph-Enhanced Retrieval",
+      organization: "Nutanix",
+      period: "May '25 - Present",
       description: [
-        "Addressed tennis robot localization on featureless tennis courts using court-line geometry as the primary visual cue",
-        "Built a ROS-based pipeline combining deep court-line segmentation model with a particle filter that reweights particles by comparing the actual segmented image with the estimated particle image from the camera model",
-        "Achieved accurate, stable localization on rosbags and advanced toward hardware deployment"
+        "Developed RANGER a repository-scale agent utilising RL-enhanced GraphRAG for code tasks | Provisional Patent & ICLR '26",
+        "Created a Monte Carlo Tree Search (MCTS) based graph retrieval algorithm fusing bi-encoder speed with cross-encoder precision",
+        "Built an AST-based tool to construct Neo4j knowledge graphs of entire repos, capturing hierarchical and cross-file dependencies",
+        "Developed a dual-stage retriever combining text2cypher for entity lookup with the novel MCTS algorithm for graph traversal",
+        "Beat Qwen-3-8B (SOTA) semantic retrieval, scoring 6% higher NDCG@10 on CodeSearchNet (NL→Code benchmark). Got 6% higher exact match on CrossCodeEval and 5% higher accuracy on RepoBench for code completion and retrieval over baselines"
       ],
-      tags: ["Computer Vision", "Robotics", "Deep Learning", "SLAM"]
+      tags: ["GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
+      highlights: ["Provisional Patent", "ICLR '26 Submission"]
     },
     {
-      title: "Sim-to-Real Transfer of Agile RL Policies",
-      organization: "CORE Robotics Lab, Georgia Tech",
-      location: "Atlanta, GA", 
-      period: "May 2025 – Present",
+      title: "Lagrangian Index Policy for Restless Bandits With Average Reward",
+      organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay; Prof. Konstantin Avrachenkov, INRIA",
+      period: "Jul '23 - Dec '24",
       description: [
-        "Tackling the challenge of learning goal-conditioned, agile RL policies that coordinate the mobile base and manipulator of a tennis robot to achieve fast, physically feasible tennis hitting motions without dense demonstrations",
-        "Promoting exploration in learning goal-conditioned whole-body policies by leveraging a manipulator SMM dataset and an Offline RL-inspired regularization to guide safe, feasible arm motions"
+        "Designed an index policy for restless bandits to optimize long-run rewards, with applications in resource allocation and scheduling",
+        "LIP requires no indexability conditions and the proposed tabular and NN-based reinforcement learning schemes for model-free setting require significantly less memory and time than the Whittle Index Policy (WIP), which is the standard in this domain",
+        "The new policy is asymptotically optimal and applicable to both Whittle Indexable and Non-Whittle Indexable problems"
       ],
-      tags: ["Reinforcement Learning", "Sim-to-Real", "Control Systems"]
+      tags: ["Restless Bandits", "Index Policy", "Reinforcement Learning", "Optimization", "Resource Allocation"]
     },
     {
-      title: "Safety-Aware Control via Margin Framework and Deep RL",
-      organization: "Decision and Control Lab, Georgia Tech",
-      location: "Atlanta, GA",
-      period: "Aug 2024 – Present", 
+      title: "Reinforcement Learning in Non-Markovian Environments",
+      organization: "IIT Bombay",
+      period: "Dec '22 - Sep '23",
       description: [
-        "Developed a Quadratic Programming-based safety filter using a novel Margin Framework, enabling control policies to maintain safety margins under uncertainty",
-        "Demonstrated effective obstacle avoidance using margin-safe controllers in both deterministic and stochastic environments, validated via simulation",
-        "Integrating the margin model into a Deep Deterministic Policy Gradient (DDPG) framework to enable reward shaping that enforces safety constraints during RL training"
+        "Designed a new RL agent, the Non-Markovian Q Agent (NMQ), to tackle environments where past information is crucial",
+        "The NMQ agent uses an autoencoder-based scheme to tackle non-Markovianity by learning a latent state space for a Deep Q-Network (DQN). Modified OpenAI Gym environments like CartPole to be partially observable for testing the agent",
+        "The NMQ agent outperformed the standard DQN agent in partially observable environments and Non-Markovian random walks"
       ],
-      tags: ["Safety-Critical Systems", "Deep RL", "Control Theory", "Optimization"]
+      tags: ["Reinforcement Learning", "Non-Markovian", "DQN", "Autoencoder", "OpenAI Gym"]
     },
     {
-      title: "Distributed Stochastic Bilevel Optimization with Linear Convergence Guarantees",
-      organization: "Systems & Control Group, IIT Bombay",
-      location: "Mumbai, India",
-      period: "May 2024 – Jan 2025",
+      title: "Matsya, Autonomous Underwater Vehicle",
+      organization: "AUV-IITB | Student Technical Team",
+      organizationLink: "https://www.auv-iitb.org/",
+      period: "Jan '21 - May '24",
       description: [
-        "Developed the BDASG algorithm for solving bilevel distributed optimization problems over undirected networks using stochastic gradient aggregation with exponential convergence",
-        "Proved linear convergence in expectation under the weakest known assumptions (PL inequality on global cost function), without requiring convexity of local functions",
-        "Conducted numerical experiments on distributed networks and rank-deficient linear regression to validate convergence and robustness across topologies (ring, star)"
+        "Accolades: IEEE Young Researchers' Prize awardee; 4th place in Robosub 2024 out of 40+ universities from 8 countries",
+        "Developed an RL controller that reduced target state achievement time by 8% compared to a PID controller in simulations",
+        "Led an 11-member team in AUV-IITB and L&T Defence's technology transfer project to develop an ROV for defense purposes",
+        "Conceptualized a towfish design for underwater pipeline inspection in collaboration with an oil consortium led by ONGC"
       ],
-      tags: ["Optimization", "Distributed Systems", "Control Theory"]
-    },
-    {
-      title: "Decentralized Collision Avoidance for 3D Fixed-Wing Flocking",
-      organization: "Autonomous & Multi-Robot Systems Lab, IIT Bombay", 
-      location: "Mumbai, India",
-      period: "Aug 2023 – May 2024",
-      description: [
-        "Developed a decentralized 3D flocking algorithm for fixed-wing UAVs with non-holonomic dynamics and actuator saturation, ensuring robust inter-agent collision avoidance and group tracking",
-        "Designed a leader-follower formation control strategy using Platonic solids and sigmoid-based switching to ensure safe flock evolution and yaw alignment",
-        "Implemented distributed consensus protocols (agent count and fixed-time average) for neighborhood-based leader trajectory estimation without global communication",
-        "Validated algorithm via Monte Carlo simulations (200+ randomized tests) with zero collisions and strict constraint satisfaction across all agents"
-      ],
-      tags: ["Multi-Agent Systems", "UAV", "Formation Control", "Consensus"]
+      tags: ["Autonomous Underwater Vehicle", "Reinforcement Learning", "Control Systems", "Robotics", "Team Leadership"],
+      highlights: ["IEEE Young Researchers' Prize", "4th place Robosub 2024"]
     }
   ];
 
@@ -117,6 +139,74 @@ const Research = () => {
           </div>
         </div>
 
+        {/* Publications */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-foreground">Publications</h2>
+          <div className="space-y-4">
+            {publications.map((publication, index) => (
+              <Card key={index} className="gradient-card border-border shadow-card transition-smooth hover:shadow-glow">
+                <CardContent className="pt-6">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                      <h3 className="text-lg font-semibold text-foreground flex-1">
+                        {publication.link ? (
+                          <a 
+                            href={publication.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-primary transition-colors flex items-center gap-2"
+                          >
+                            {publication.title}
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        ) : (
+                          publication.title
+                        )}
+                      </h3>
+                      <div className="flex items-center gap-2">
+                        <Badge 
+                          variant={publication.status === "Published" ? "default" : "secondary"}
+                          className={publication.status === "Published" ? "bg-green-100 text-green-800 border-green-200" : ""}
+                        >
+                          {publication.status}
+                        </Badge>
+                        {publication.highlight && (
+                          <Badge variant="default" className="bg-blue-100 text-blue-800 border-blue-200">
+                            {publication.highlight}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <p className="text-muted-foreground">
+                      <span className="font-medium">{publication.authors}</span>
+                    </p>
+                    
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                      <p className="text-muted-foreground">
+                        <span className="font-medium italic">{publication.venue}</span>
+                        {publication.arxiv && (
+                          <span className="ml-2">
+                            <a 
+                              href={publication.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline"
+                            >
+                              {publication.arxiv}
+                            </a>
+                          </span>
+                        )}
+                      </p>
+                      <span className="text-sm text-muted-foreground">{publication.year}</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Research Experience */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-foreground">Research Experience</h2>
@@ -130,7 +220,19 @@ const Research = () => {
                         {experience.title}
                       </CardTitle>
                       <CardDescription className="text-primary font-medium text-base">
-                        {experience.organization}
+                        {experience.organizationLink ? (
+                          <a 
+                            href={experience.organizationLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline flex items-center gap-1"
+                          >
+                            {experience.organization}
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        ) : (
+                          experience.organization
+                        )}
                       </CardDescription>
                     </div>
                     <div className="flex flex-col sm:items-end gap-2">
@@ -138,12 +240,17 @@ const Research = () => {
                         <Calendar className="h-4 w-4 mr-1" />
                         {experience.period}
                       </div>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        {experience.location}
-                      </div>
                     </div>
                   </div>
+                  {experience.highlights && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {experience.highlights.map((highlight, idx) => (
+                        <Badge key={idx} variant="default" className="bg-green-100 text-green-800 border-green-200">
+                          {highlight}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 mb-4">
