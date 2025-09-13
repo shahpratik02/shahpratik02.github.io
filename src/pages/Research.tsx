@@ -53,6 +53,10 @@ const Research = () => {
     {
       title: "Lagrangian Index Policy for Restless Bandits With Average Reward",
       organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay; Prof. Konstantin Avrachenkov, INRIA",
+      professorLinks: [
+        { name: "Prof. Vivek Borkar, EE, IIT Bombay", url: "https://www.ee.iitb.ac.in/web/people/vivek-shripad-borkar/" },
+        { name: "Prof. Konstantin Avrachenkov, INRIA", url: "https://www-sop.inria.fr/members/Konstantin.Avratchenkov/me.html" }
+      ],
       period: "Jul '23 - Dec '24",
       description: [
         "Designed an index policy for restless bandits to optimize long-run rewards, with applications in resource allocation and scheduling",
@@ -64,6 +68,9 @@ const Research = () => {
     {
       title: "Reinforcement Learning in Non-Markovian Environments",
       organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay",
+      professorLinks: [
+        { name: "Prof. Vivek Borkar, EE, IIT Bombay", url: "https://www.ee.iitb.ac.in/web/people/vivek-shripad-borkar/" }
+      ],
       period: "Dec '22 - Sep '23",
       description: [
         "Designed a new RL agent, the Non-Markovian Q Agent (NMQ), to tackle environments where past information is crucial",
@@ -129,8 +136,7 @@ const Research = () => {
                       </h3>
                       <div className="flex items-center gap-2">
                         <Badge 
-                          variant={publication.status === "Published" ? "default" : "secondary"}
-                          className={publication.status === "Published" ? "bg-green-100 text-green-800 border-green-200" : ""}
+                          variant="secondary"
                         >
                           {publication.status}
                         </Badge>
@@ -184,7 +190,27 @@ const Research = () => {
                         {experience.title}
                       </CardTitle>
                       <CardDescription className="text-primary font-medium text-base">
-                        {experience.organizationLink ? (
+                        {experience.professorLinks ? (
+                          <div className="flex flex-col gap-1">
+                            <span>Guides:</span>
+                            <div className="flex flex-wrap gap-2">
+                              {experience.professorLinks.map((prof, idx) => (
+                                <span key={idx}>
+                                  <a 
+                                    href={prof.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:underline text-primary flex items-center gap-1"
+                                  >
+                                    {prof.name}
+                                    <ExternalLink className="h-3 w-3" />
+                                  </a>
+                                  {idx < experience.professorLinks.length - 1 && <span className="text-muted-foreground">;</span>}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ) : experience.organizationLink ? (
                           <a 
                             href={experience.organizationLink} 
                             target="_blank" 
