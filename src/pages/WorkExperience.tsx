@@ -1,0 +1,153 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+
+const WorkExperience = () => {
+  const workExperience = [
+    {
+      title: "Intern, Member of Technical Staff",
+      organization: "Nutanix",
+      location: "San Jose, CA",
+      period: "May '25 - Aug '25",
+      description: [
+        "Developed RANGER a repository-scale agent utilising RL-enhanced GraphRAG for code tasks | Provisional Patent & ICLR '26",
+        "Created a Monte Carlo Tree Search (MCTS) based graph retrieval algorithm fusing bi-encoder speed with cross-encoder precision",
+        "Built an AST-based tool to construct Neo4j knowledge graphs of entire repos, capturing hierarchical and cross-file dependencies",
+        "Developed a dual-stage retriever combining text2cypher for entity lookup with the novel MCTS algorithm for graph traversal",
+        "Beat Qwen-3-8B (SOTA) semantic retrieval, scoring 6% higher NDCG@10 on CodeSearchNet (NL→Code benchmark). Got 6% higher exact match on CrossCodeEval and 5% higher accuracy on RepoBench for code completion and retrieval over baselines"
+      ],
+      tags: ["GraphRAG", "MCTS", "AST", "Neo4j", "Reinforcement Learning", "NLP"],
+      highlights: ["Provisional Patent", "ICLR '26 Submission"]
+    },
+    {
+      title: "Data Science Intern",
+      organization: "Microsoft",
+      location: "Redmond, WA",
+      period: "May '23 - Jun '23",
+      description: [
+        "Automated personalized health tips generation using OpenAI GPT Models on MSN health pages data | In Production",
+        "Implemented an automated RAG pipeline from scratch using serverless Azure Functions, created REST APIs to retrieve contextual data from Azure SQL, and leveraged the OpenAI Completions API to interact with GPT-3.5 for generating tips",
+        "Reduced the tip generation time from 2 weeks to 30 minutes for 100 tips and attained a per-tip cost of ~$0.0015",
+        "Created a GPT-3.5 based translation pipeline, expanding coverage from 14 English to all 24 markets, including non-English ones"
+      ],
+      tags: ["OpenAI GPT", "Azure Functions", "RAG", "REST APIs", "Azure SQL", "GPT-3.5"],
+      highlights: ["In Production", "2 weeks → 30 minutes"]
+    },
+    {
+      title: "Graduate Research Assistant",
+      organization: "Partnership for an Advanced Computing Environment (PACE)",
+      organizationLink: "https://pace.gatech.edu/",
+      location: "Atlanta, GA",
+      period: "Jan '25 - Present",
+      description: [
+        "Working on AI inference server with a LiteLLM gateway routing requests to vLLM servers, scheduled on HPC GPUs via slurm",
+        "Enabled 51 courses to use PACE's HPC clusters by containerizing ML workloads, configuring shared storage and scheduling jobs",
+        "Developed workshops for the AI Makerspace, a university-wide initiative with Nvidia for hands-on AI/ML education, covering multi-GPU training (torchrun), Llama-2 fine-tuning, and model deployment with TensorRT and Triton Inference Server"
+      ],
+      tags: ["LiteLLM", "vLLM", "HPC", "Slurm", "Docker", "TensorRT", "Triton", "Nvidia"],
+      highlights: ["51 courses enabled", "University-wide initiative"]
+    },
+    {
+      title: "Data Science Intern",
+      organization: "Data Axle",
+      location: "Tampa, FL",
+      period: "May '22 - Jul '22",
+      description: [
+        "Consolidated 50,000 job titles into 1,000 standardized titles using NLP and clustering for the company's lead generation service",
+        "Applied tokenization, GloVe vectorization, dimensionality reduction (PCA, t-SNE), and K-means clustering to group job titles"
+      ],
+      tags: ["NLP", "GloVe", "PCA", "t-SNE", "K-means", "Clustering"],
+      highlights: ["50,000 → 1,000 titles"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background pt-20 pb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            Work Experience
+          </h1>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
+              My professional journey spans across leading technology companies, from developing cutting-edge AI systems at Nutanix to building production-ready solutions at Microsoft. I've worked on diverse projects including repository-scale code intelligence, automated content generation, high-performance computing infrastructure, and data processing pipelines. Each role has strengthened my expertise in machine learning, software engineering, and system design while contributing to impactful products used by millions.
+            </p>
+          </div>
+        </div>
+
+        {/* Work Experience */}
+        <section>
+          <div className="space-y-6">
+            {workExperience.map((experience, index) => (
+              <Card key={index} className="gradient-card border-border shadow-card transition-smooth hover:shadow-glow">
+                <CardHeader>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl text-foreground mb-2">
+                        {experience.title}
+                      </CardTitle>
+                      <CardDescription className="text-primary font-medium text-base flex items-center gap-2">
+                        {experience.organizationLink ? (
+                          <a 
+                            href={experience.organizationLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline flex items-center gap-1"
+                          >
+                            {experience.organization}
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        ) : (
+                          experience.organization
+                        )}
+                      </CardDescription>
+                    </div>
+                    <div className="flex flex-col sm:items-end gap-2">
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {experience.period}
+                      </div>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <MapPin className="h-4 w-4 mr-1" />
+                        {experience.location}
+                      </div>
+                    </div>
+                  </div>
+                  {experience.highlights && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {experience.highlights.map((highlight, idx) => (
+                        <Badge key={idx} variant="default" className="bg-green-100 text-green-800 border-green-200">
+                          {highlight}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-4">
+                    {experience.description.map((point, idx) => (
+                      <li key={idx} className="text-muted-foreground flex items-start">
+                        <span className="text-primary mr-2 mt-2">•</span>
+                        <span className="flex-1 text-justify">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    {experience.tags.map((tag, idx) => (
+                      <Badge key={idx} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default WorkExperience;
