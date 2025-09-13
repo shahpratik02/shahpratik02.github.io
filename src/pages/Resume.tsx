@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Download, ExternalLink } from 'lucide-react';
 
 const Resume = () => {
-  const resumePdfPath = '/Users/pratik/Website/shahpratik02.github.io/public/pratik_resume_final_gatech_new2.pdf'; // You'll place your PDF file in the public folder
+  const resumePdfPath = '/pratik_resume_final_gatech_new2.pdf'; // PDF file in the public folder
   
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -27,7 +27,7 @@ const Resume = () => {
               Resume
             </h1>
             <p className="text-lg text-muted-foreground">
-              Pratik Shah - Machine Learning Engineer
+              Pratik Shah
             </p>
           </div>
           
