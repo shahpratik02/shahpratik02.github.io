@@ -90,39 +90,6 @@ const Research = () => {
     }
   ];
 
-  const projects = [
-    {
-      title: "Safe Policy Adaptation in Learning from Demonstrations",
-      period: "Jan 2025 – Apr 2025",
-      description: [
-        "Explored integration of margin-based safety representations into Adversarial Inverse Reinforcement Learning (AIRL) to learn explicit safety-aware reward functions from demonstrations",
-        "Abandoned AIRL due to instability and recursive dependencies in margin features, shifting focus to Behavior Cloning (BC) and post-hoc safety filtering",
-        "Developed a Quadratic Programming-based safety filter to project unsafe actions onto margin-compliant alternatives during long-horizon planning; achieving safety in unseen environments",
-        "Applied filter-guided BC finetuning for adaptation; ensured safe behaviors but observed limited task success due to poor goal-directed generalization in novel states"
-      ],
-      tags: ["Imitation Learning", "Safety", "Reinforcement Learning"]
-    },
-    {
-      title: "Learning-Based Control and Prediction for Tethered Quadrotor Payload Systems",
-      period: "Jan 2025 – Apr 2025", 
-      description: [
-        "Trained a transformer-based model to predict full payload states from onboard quadrotor state history, enabling latent payload inference in underactuated settings",
-        "Designed a partially observable PPO agent using only quadrotor states and inferred payload states from the trained transformer model to achieve inverted pendulum stabilization of the payload",
-        "Awarded Best Project Award among 30+ teams for innovation in combining deep learning and RL for dynamics-aware aerial manipulation"
-      ],
-      tags: ["Deep Learning", "Control", "Transformers", "PPO"]
-    },
-    {
-      title: "ROS2-Based TurtleBot3 Navigation",
-      period: "Aug 2024 – Dec 2024",
-      description: [
-        "Engineered and deployed a ROS2-based navigation and perception stack on TurtleBot3 for autonomous maze traversal in unknown environments",
-        "Implemented vision-based object tracking and robust object detection using OpenCV, enabling real-time response to visual cues",
-        "Integrated sensor data from LiDAR and odometry for obstacle detection and avoidance, ensuring smooth and safe path execution"
-      ],
-      tags: ["ROS2", "Navigation", "Computer Vision", "SLAM"]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background pt-20 pb-12">
@@ -274,44 +241,6 @@ const Research = () => {
           </div>
         </section>
 
-        {/* Projects */}
-        <section>
-          <h2 className="text-3xl font-bold mb-8 text-foreground">Projects</h2>
-          <div className="space-y-6">
-            {projects.map((project, index) => (
-              <Card key={index} className="gradient-card border-border shadow-card transition-smooth hover:shadow-glow">
-                <CardHeader>
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                    <CardTitle className="text-xl text-foreground">
-                      {project.title}
-                    </CardTitle>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {project.period}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {project.description.map((point, idx) => (
-                      <li key={idx} className="text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2 mt-2">•</span>
-                        <span className="flex-1 text-justify">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   );
