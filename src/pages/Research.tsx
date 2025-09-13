@@ -191,24 +191,22 @@ const Research = () => {
                       </CardTitle>
                       <CardDescription className="text-primary font-medium text-base">
                         {experience.professorLinks ? (
-                          <div className="flex flex-col gap-1">
+                          <div className="flex flex-wrap items-center gap-2">
                             <span>Guides:</span>
-                            <div className="flex flex-wrap gap-2">
-                              {experience.professorLinks.map((prof, idx) => (
-                                <span key={idx} className="flex items-center">
-                                  <a 
-                                    href={prof.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="hover:underline text-primary flex items-center gap-1"
-                                  >
-                                    {prof.name}
-                                    <ExternalLink className="h-3 w-3" />
-                                  </a>
-                                  {idx < experience.professorLinks.length - 1 && <span className="text-muted-foreground ml-1">,</span>}
-                                </span>
-                              ))}
-                            </div>
+                            {experience.professorLinks.map((prof, idx) => (
+                              <span key={idx} className="flex items-center">
+                                <a 
+                                  href={prof.url} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:underline text-primary flex items-center gap-1"
+                                >
+                                  {prof.name}
+                                  <ExternalLink className="h-3 w-3" />
+                                </a>
+                                {idx < experience.professorLinks.length - 1 && <span className="text-muted-foreground ml-1">,</span>}
+                              </span>
+                            ))}
                           </div>
                         ) : experience.organizationLink ? (
                           <a 
