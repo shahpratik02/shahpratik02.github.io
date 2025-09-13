@@ -15,7 +15,7 @@ const Index = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              As a Graduate Research Assistant at Georgia Tech's PACE initiative, I am building an AI inference server that routes requests through a LiteLLM gateway to vLLM servers scheduled on HPC GPUs via Slurm. At Georgia Tech's STAR Lab under Prof. Harish Ravichandar, I am working on Koopman operator-based visual imitation learning for dexterous manipulation. My interest in robotics began during my undergraduate studies at IIT Bombay, where I was part of the Autonomous Underwater Vehicle Team developing the Matsya series and representing India in the international RoboSub competition.
+            As a Graduate Research Assistant at PACE, Georgia Tech’s high-performance computing (HPC) initiative, I’m diving into what really happens in a remote server when we run AI workloads. Currently, I am building an AI inference server that routes requests through a LiteLLM gateway to vLLM servers scheduled on HPC GPUs via Slurm. At Georgia Tech's STAR Lab under Prof. Harish Ravichandar, I am working on Koopman operator-based visual imitation learning for dexterous manipulation. My interest in robotics began during my undergraduate studies at IIT Bombay, where I was part of the Autonomous Underwater Vehicle Team developing the Matsya series and representing India in the international RoboSub competition.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
@@ -37,7 +37,7 @@ const Index = () => {
                   Frameworks:
                 </p>
                 <p className="text-lg text-muted-foreground text-justify">
-                  PyTorch, TensorFlow, vLLM, LiteLLM, mcp[cli], LangChain, LlamaIndex, HuggingFace, openai, Gym, RLlib, torchrun, TensorRT, deepspeed, uvicron, spacy, pandas
+                  PyTorch, TensorFlow, vLLM, LiteLLM, mcp, LangChain, LlamaIndex, HuggingFace, openai, Gym, RLlib, torchrun, TensorRT, deepspeed, uvicron, spacy, pandas
                 </p>
               </div>
             </div>
