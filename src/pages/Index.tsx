@@ -28,7 +28,7 @@ const Index = () => {
                   Skills:
                 </p>
                 <p className="text-lg text-muted-foreground text-justify">
-                  AWS Certified Cloud Practitioner, Python, C++, SQL, Azure, Spark, Java, CUDA, Linux, Neo4j, Git, Slurm
+                  AWS Certified Cloud Practitioner, Python, C++, SQL, Azure, Spark, Java, CUDA, Linux, Neo4j, Git, Slurm, Docker, Bash
                 </p>
               </div>
               
@@ -37,7 +37,7 @@ const Index = () => {
                   Frameworks:
                 </p>
                 <p className="text-lg text-muted-foreground text-justify">
-                  PyTorch, TensorFlow, vLLM, LangChain, LlamaIndex, HuggingFace, OpenAI, Gym, RLlib, torchrun, TensorRT
+                  PyTorch, TensorFlow, vLLM, LiteLLM, mcp[cli], LangChain, LlamaIndex, HuggingFace, openai, Gym, RLlib, torchrun, TensorRT, deepspeed, uvicron, spacy, pandas
                 </p>
               </div>
             </div>

@@ -1,108 +1,95 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Download, ExternalLink, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Download, ExternalLink } from 'lucide-react';
 
 const Resume = () => {
+  const resumePdfPath = '/Users/pratik/Website/shahpratik02.github.io/public/pratik_resume_final_gatech_new2.pdf'; // You'll place your PDF file in the public folder
+  
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = resumePdfPath;
+    link.download = 'Pratik_Shah_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleOpenInNewTab = () => {
+    window.open(resumePdfPath, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background pt-20 pb-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Resume
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            Download my complete academic and professional background
-          </p>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header with Download Button */}
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
+          <div className="text-center sm:text-left mb-4 sm:mb-0">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              Resume
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Pratik Shah - Machine Learning Engineer
+            </p>
+          </div>
+          
+          <div className="flex gap-3">
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={handleOpenInNewTab}
+              className="border-border hover:bg-muted"
+            >
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Open in New Tab
+            </Button>
+            <Button 
+              size="lg" 
+              onClick={handleDownload}
+              className="gradient-primary shadow-glow transition-smooth hover:scale-105"
+            >
+              <Download className="h-4 w-4 mr-2" />
+              Download PDF
+            </Button>
+          </div>
         </div>
 
-        {/* Contact Info Card */}
-        <Card className="gradient-card border-border shadow-card mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl text-foreground">Contact Information</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center text-muted-foreground">
-                <Mail className="h-5 w-5 mr-3 text-primary" />
-                <span>ajytak@gatech.edu</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <Phone className="h-5 w-5 mr-3 text-primary" />
-                <span>404-429-8599</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <Globe className="h-5 w-5 mr-3 text-primary" />
-                <span>linkedin.com/in/ajytak</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <MapPin className="h-5 w-5 mr-3 text-primary" />
-                <span>Atlanta, GA</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Download Section */}
-        <Card className="gradient-card border-border shadow-card mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl text-foreground">Download Resume</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-center">
-              <p className="text-muted-foreground mb-6">
-                Get the most up-to-date version of my resume with detailed information about my 
-                education, research experience, publications, and technical skills.
+        {/* PDF Viewer */}
+        <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden border border-border">
+          <iframe
+            src={resumePdfPath}
+            width="100%"
+            height="800px"
+            style={{ border: 'none' }}
+            title="Resume PDF"
+            className="w-full"
+          >
+            <div className="p-8 text-center">
+              <p className="text-muted-foreground mb-4">
+                Your browser doesn't support PDF viewing. Please download the resume instead.
               </p>
-              <Button 
-                size="lg" 
-                className="gradient-primary shadow-glow transition-smooth hover:scale-105"
-                onClick={() => window.open('https://drive.google.com/file/d/1X98qj1KUZrWImJHieYXEB41__FHW3jXF/view?usp=sharing', '_blank')}
-              >
-                <Download className="h-5 w-5 mr-2" />
-                Download Resume (PDF)
+              <Button onClick={handleDownload}>
+                <Download className="h-4 w-4 mr-2" />
+                Download Resume
               </Button>
             </div>
-          </CardContent>
-        </Card>
+          </iframe>
+        </div>
 
-        {/* Quick Overview */}
-        <Card className="gradient-card border-border shadow-card">
-          <CardHeader>
-            <CardTitle className="text-2xl text-foreground">Quick Overview</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Education</h3>
-                <div className="space-y-2">
-                  <div>
-                    <p className="font-medium text-foreground">M.S. in Robotics</p>
-                    <p className="text-sm text-muted-foreground">Georgia Institute of Technology</p>
-                    <p className="text-sm text-muted-foreground">GPA: 4.0/4.0 • Aug 2024 – Present</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">B.Tech in Aerospace Engineering</p>
-                    <p className="text-sm text-muted-foreground">Indian Institute of Technology, Bombay</p>
-                    <p className="text-sm text-muted-foreground">GPA: 8.95/10.0 • Aug 2020 – May 2024</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-primary mb-3">Research Interests</h3>
-                <ul className="space-y-1 text-muted-foreground">
-                  <li>• Agile Robotics</li>
-                  <li>• Learning-based Control</li>
-                  <li>• Sim-to-Real Transfer</li>
-                  <li>• Multi-Agent Systems</li>
-                  <li>• Safety-Critical Systems</li>
-                  <li>• Computer Vision for Robotics</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        {/* Fallback message for mobile or unsupported browsers */}
+        <div className="mt-6 p-4 bg-muted rounded-lg text-center sm:hidden">
+          <p className="text-muted-foreground mb-4">
+            For the best viewing experience on mobile, please download or open in a new tab.
+          </p>
+          <div className="flex gap-2 justify-center">
+            <Button size="sm" variant="outline" onClick={handleOpenInNewTab}>
+              <ExternalLink className="h-4 w-4 mr-1" />
+              Open
+            </Button>
+            <Button size="sm" onClick={handleDownload}>
+              <Download className="h-4 w-4 mr-1" />
+              Download
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
