@@ -52,7 +52,7 @@ const Research = () => {
     },
     {
       title: "Lagrangian Index Policy for Restless Bandits With Average Reward",
-      organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay; Prof. Konstantin Avrachenkov, INRIA",
+      organization: "Guides: Prof. Vivek Borkar, EE, IIT Bombay, Prof. Konstantin Avrachenkov, INRIA",
       professorLinks: [
         { name: "Prof. Vivek Borkar, EE, IIT Bombay", url: "https://www.ee.iitb.ac.in/web/people/vivek-shripad-borkar/" },
         { name: "Prof. Konstantin Avrachenkov, INRIA", url: "https://www-sop.inria.fr/members/Konstantin.Avratchenkov/me.html" }
