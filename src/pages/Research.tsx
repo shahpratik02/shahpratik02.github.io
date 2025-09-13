@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 
 const Research = () => {
-  const currentFocus = `I'm a Machine Learning graduate student at Georgia Tech and my research interests spans Reinforcement Learning, Natural Language Processing, and Robotics.`;
+  const currentFocus = `I'm a Machine Learning graduate student at Georgia Tech, and my research interests span Reinforcement Learning, Natural Language Processing, and Robotics.`;
 
   const publications = [
     {
