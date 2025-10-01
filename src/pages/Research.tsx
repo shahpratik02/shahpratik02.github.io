@@ -11,7 +11,7 @@ const Research = () => {
       status: "Submitted",
       venue: "ICLR 2026",
       venueType: "conference",
-      authors: "P. Shah et al.",
+      authors: "P. Shah, R. Ghosh, A. Singhal, D. Dutta",
       year: "2026",
       link: "https://arxiv.org/abs/2509.25257",
       arxiv: "arXiv:2509.25257"
