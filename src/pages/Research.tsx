@@ -8,12 +8,13 @@ const Research = () => {
   const publications = [
     {
       title: "RANGER: Repository-Scale Agent for Graph-Enhanced Retrieval",
-      status: "Preparing for Submission",
+      status: "Submitted",
       venue: "ICLR 2026",
       venueType: "conference",
       authors: "P. Shah et al.",
       year: "2026",
-      link: null,
+      link: "https://arxiv.org/abs/2509.25257",
+      arxiv: "arXiv:2509.25257"
     },
     {
       title: "Lagrangian Index Policy for Restless Bandits with Average Reward",
