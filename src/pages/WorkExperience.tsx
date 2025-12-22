@@ -5,6 +5,19 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 const WorkExperience = () => {
   const workExperience = [
     {
+      title: "Graduate Research Assistant",
+      organization: "Georgia Tech HPC Center (PACE)",
+      organizationLink: "https://pace.gatech.edu/",
+      location: "Atlanta, GA",
+      period: "Jan '25 - Present",
+      description: [
+        "Developing a multimodal AI inference server running GPT-OSS-120B, InternVL-3.5, and SD-XL, using vLLM for LLM/VLM tasks and TensorRT-engine Triton server for image generation, unified by a custom OpenAI-style API wrapper for LiteLLM integration",
+        "Orchestrated LiteLLM request routing across ephemeral Slurm-scheduled GPU nodes running Apptainer-based inference servers, and built a cron-driven self-healing system for automated service discovery and failover in a non-Kubernetes HPC environment",
+        "Working on the AI Makerspace, a campus initiative, leading tutorials like implementing FlashAttention in CUDA from scratch"
+      ],
+      tags: ["AI Inference Server", "LiteLLM", "vLLM", "HPC", "Slurm", "TensorRT", "Triton", "Apptainer", "CUDA", "FlashAttention"],
+    },
+    {
       title: "Intern, Member of Technical Staff",
       organization: "Nutanix",
       location: "San Jose, CA",
@@ -30,19 +43,6 @@ const WorkExperience = () => {
         "Created a GPT-3.5 based translation pipeline, expanding coverage from 14 English to all 24 markets, including non-English ones"
       ],
       tags: ["OpenAI API", "Azure", "Azure Functions", "RAG", "REST APIs", "Azure SQL", "GPT-3.5", "Translation"],
-    },
-    {
-      title: "Graduate Research Assistant",
-      organization: "Partnership for an Advanced Computing Environment (PACE)",
-      organizationLink: "https://pace.gatech.edu/",
-      location: "Atlanta, GA",
-      period: "Jan '25 - Present",
-      description: [
-        "Working on AI inference server with a LiteLLM gateway routing requests to vLLM servers, scheduled on HPC GPUs via slurm",
-        "Enabled 51 courses to use PACE's HPC clusters by containerizing ML workloads, configuring shared storage and scheduling jobs",
-        "Developed workshops for the AI Makerspace, a university-wide initiative with Nvidia for hands-on AI/ML education, covering multi-GPU training (torchrun), Llama-2 fine-tuning, and model deployment with TensorRT and Triton Inference Server"
-      ],
-      tags: ["AI Inference Server", "LiteLLM", "vLLM", "HPC", "Slurm", "Docker", "TensorRT", "Triton", "Apptainer", "torchrun"],
     },
     {
       title: "Data Science Intern",

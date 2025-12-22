@@ -11,11 +11,15 @@ const Index = () => {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
+              As a Graduate Research Assistant at PACE, Georgia Tech's high-performance computing (HPC) initiative, I'm diving into what really happens in a remote server when we run AI workloads. I am developing a multimodal AI inference server running GPT-OSS-120B, InternVL-3.5, and SD-XL, using vLLM for large language and vision-language model inference and a TensorRT-engine Triton server for image generation, all unified through a custom OpenAI-style API wrapper for seamless LiteLLM integration. I orchestrated LiteLLM request routing across ephemeral Slurm-scheduled GPU nodes running Apptainer-based inference servers, and built a cron-driven self-healing system for automated service discovery and failover in a non-Kubernetes HPC environment.
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
               Most recently, at Nutanix, I developed RANGER, a repository-scale code retrieval agent that combines knowledge graph construction with Monte Carlo Tree Search traversal. This system enables multi-hop reasoning across large codebases, outperformed baseline models on multiple benchmarks, and has a provisional patent filed with a submission under preparation to ICLR 2026. At Microsoft, I built and deployed a serverless retrieval-augmented generation pipeline on Azure using GPT-3.5 to generate and translate personalized health tips at scale, reducing production time from two weeks to 30 minutes.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-            As a Graduate Research Assistant at PACE, Georgia Tech’s high-performance computing (HPC) initiative, I’m diving into what really happens in a remote server when we run AI workloads. Currently, I am building an AI inference server that routes requests through a LiteLLM gateway to vLLM servers scheduled on HPC GPUs via Slurm. At Georgia Tech's STAR Lab under Prof. Harish Ravichandar, I am working on Koopman operator-based visual imitation learning for dexterous manipulation. My interest in robotics began during my undergraduate studies at IIT Bombay, where I was part of the Autonomous Underwater Vehicle Team developing the Matsya series and representing India in the international RoboSub competition.
+              At Georgia Tech's STAR Lab under Prof. Harish Ravichandar, I am working on Koopman operator-based visual imitation learning for dexterous manipulation. My interest in robotics began during my undergraduate studies at IIT Bombay, where I was part of the Autonomous Underwater Vehicle Team developing the Matsya series and representing India in the international RoboSub competition.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
@@ -37,7 +41,7 @@ const Index = () => {
                   Frameworks:
                 </p>
                 <p className="text-lg text-muted-foreground text-justify">
-                  PyTorch, TensorFlow, vLLM, LiteLLM, mcp, LangChain, LlamaIndex, HuggingFace, openai, Gym, RLlib, torchrun, TensorRT, deepspeed, uvicron, spacy, pandas
+                  PyTorch, TensorFlow, vLLM, LiteLLM, Triton, LangChain, LlamaIndex, HuggingFace, openai, Gym, RLlib, torchrun, TensorRT, deepspeed, uvicorn, spacy, pandas
                 </p>
               </div>
             </div>
