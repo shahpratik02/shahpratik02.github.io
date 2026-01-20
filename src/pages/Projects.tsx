@@ -27,7 +27,7 @@ const Projects = () => {
           </h1>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-              A collection of my personal and academic projects, showcasing my work in high-performance computing, machine learning systems, and GPU programming.
+              A collection of my personal projects.
             </p>
           </div>
         </div>
